@@ -1,6 +1,6 @@
 # Material_Switch
 
-Material switch design in OpenHarmony.
+This library is developed to provide customizable toggle switches  implemented using extended typescript.
 
 ## Download & Install
 
@@ -8,8 +8,6 @@ Install using npm
 
 ```npm i ohos-material-switch```
 
-Details about OpenHarmony NPM environment configuration, see
-at [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
 
 ## Usage Instructions
 

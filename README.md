@@ -16,7 +16,7 @@ at [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usa
 1. Import files and code dependencies
 
 ```ets
-import { Switch, switchModel, IconImageType }  from "@ohos/material-switch"import { Switch, switchModel, IconImageType }  from "@ohos/material-switch"
+import { Switch, switchModel }  from "@ohos/material-switch"
 ```
 
 2. Initialize switch model data

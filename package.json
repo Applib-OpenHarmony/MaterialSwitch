@@ -1,5 +1,5 @@
 {
-  "name": "@ohos/material-switch",
+  "name": "material-switch",
   "version": "1.0.0",
   "ohos": {
     "org": "huawei",

@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class ColorConstants {
+class colorConstants {
   defaultOnBackgroundColor: string | Color | Resource = "rgba(55,136,62,1.0)"
   defaultOffBackgroundColor: string | Color | Resource = "rgba(216,216,216,1.0)"
   defaultOnCircleColor: string | Color | Resource = Color.White
@@ -30,17 +30,17 @@ export namespace SwitchModel {
     private isOn: boolean = false
     private icon: Resource = $r('app.media.tick')
     private disabled: boolean = false
-    private ColorConstant = new ColorConstants();
-    private onBackgroundColor: string | Color | Resource = this.ColorConstant.defaultOnBackgroundColor
-    private offBackgroundColor: string | Color | Resource = this.ColorConstant.defaultOffBackgroundColor
+    private colorConstant = new colorConstants();
+    private onBackgroundColor: string | Color | Resource = this.colorConstant.defaultOnBackgroundColor
+    private offBackgroundColor: string | Color | Resource = this.colorConstant.defaultOffBackgroundColor
 
 
 
-    private onCircleColor: string | Color | Resource= this.ColorConstant.defaultOnCircleColor
-    private offCircleColor: string | Color | Resource= this.ColorConstant.defaultOffCircleColor
+    private onCircleColor: string | Color | Resource= this.colorConstant.defaultOnCircleColor
+    private offCircleColor: string | Color | Resource= this.colorConstant.defaultOffCircleColor
 
-    private onBorderColor: string | Color | Resource= this.ColorConstant.defaultOnBorderColor
-    private offBorderColor: string | Color | Resource= this.ColorConstant.defaultOffBorderColor
+    private onBorderColor: string | Color | Resource= this.colorConstant.defaultOnBorderColor
+    private offBorderColor: string | Color | Resource= this.colorConstant.defaultOffBorderColor
 
 
     getOnBackgroundColor(): string | Resource | Color {
@@ -51,7 +51,7 @@ export namespace SwitchModel {
       if (onBackgroundColor != null && onBackgroundColor != undefined) {
         this.onBackgroundColor = onBackgroundColor
       } else {
-        this.onBackgroundColor = this.ColorConstant.defaultOnBackgroundColor
+        this.onBackgroundColor = this.colorConstant.defaultOnBackgroundColor
       }
       return this
     }
@@ -64,7 +64,7 @@ export namespace SwitchModel {
       if (offBackgroundColor != null && offBackgroundColor != undefined) {
         this.offBackgroundColor = offBackgroundColor
       } else {
-        this.offBackgroundColor = this.ColorConstant.defaultOffBackgroundColor
+        this.offBackgroundColor = this.colorConstant.defaultOffBackgroundColor
       }
       return this
     }
@@ -77,7 +77,7 @@ export namespace SwitchModel {
       if (onCircleColor != null && onCircleColor != undefined) {
         this.onCircleColor = onCircleColor
       } else {
-        this.onCircleColor = this.ColorConstant.defaultOnCircleColor
+        this.onCircleColor = this.colorConstant.defaultOnCircleColor
       }
       return this
     }
@@ -90,7 +90,7 @@ export namespace SwitchModel {
       if (offCircleColor != null && offCircleColor != undefined) {
         this.offCircleColor = offCircleColor
       } else {
-        this.offCircleColor = this.ColorConstant.defaultOffCircleColor
+        this.offCircleColor = this.colorConstant.defaultOffCircleColor
       }
       return this
     }
@@ -103,7 +103,7 @@ export namespace SwitchModel {
       if (onBorderColor != null && onBorderColor != undefined) {
         this.onBorderColor = onBorderColor
       } else {
-        this.onBorderColor = this.ColorConstant.defaultOnBorderColor
+        this.onBorderColor = this.colorConstant.defaultOnBorderColor
       }
       return this
     }
@@ -116,7 +116,7 @@ export namespace SwitchModel {
       if (offBorderColor != null && offBorderColor != undefined) {
         this.offBorderColor = offBorderColor
       } else {
-        this.offBorderColor = this.ColorConstant.defaultOffBorderColor
+        this.offBorderColor = this.colorConstant.defaultOffBorderColor
       }
       return this
     }
@@ -220,12 +220,12 @@ export namespace SwitchModel {
       this.isOn = false
       this.icon = $r('app.media.tick')
       this.disabled = false
-      this.onBackgroundColor = this.ColorConstant.defaultOnBackgroundColor
-      this.offBackgroundColor = this.ColorConstant.defaultOffBackgroundColor
-      this.onCircleColor = this.ColorConstant.defaultOnCircleColor
-      this.offCircleColor = this.ColorConstant.defaultOffCircleColor
-      this.onBorderColor = this.ColorConstant.defaultOnBorderColor
-      this.offBorderColor = this.ColorConstant.defaultOffBorderColor
+      this.onBackgroundColor = this.colorConstant.defaultOnBackgroundColor
+      this.offBackgroundColor = this.colorConstant.defaultOffBackgroundColor
+      this.onCircleColor = this.colorConstant.defaultOnCircleColor
+      this.offCircleColor = this.colorConstant.defaultOffCircleColor
+      this.onBorderColor = this.colorConstant.defaultOnBorderColor
+      this.offBorderColor = this.colorConstant.defaultOffBorderColor
       return this
     }
   }

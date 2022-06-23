@@ -19,12 +19,12 @@ import { Switch, SwitchModel }  from "@ohos/material-switch"
 @Entry
 @Component
 struct Index {
-  private SwitchModel1: SwitchModel.Model = new SwitchModel.Model();
-  private SwitchModel2: SwitchModel.Model = new SwitchModel.Model();
-  private SwitchModel3: SwitchModel.Model = new SwitchModel.Model();
-  private SwitchModel4: SwitchModel.Model = new SwitchModel.Model();
-  private SwitchModel5: SwitchModel.Model = new SwitchModel.Model();
-  private SwitchModel6: SwitchModel.Model = new SwitchModel.Model();
+  private switchModel1: SwitchModel.Model = new SwitchModel.Model();
+  private switchModel2: SwitchModel.Model = new SwitchModel.Model();
+  private switchModel3: SwitchModel.Model = new SwitchModel.Model();
+  private switchModel4: SwitchModel.Model = new SwitchModel.Model();
+  private switchModel5: SwitchModel.Model = new SwitchModel.Model();
+  private switchModel6: SwitchModel.Model = new SwitchModel.Model();
 
   public aboutToAppear(): void {
     this.updateModelForFirst()
@@ -36,41 +36,41 @@ struct Index {
   }
 
   updateModelForFirst() {
-    this.SwitchModel1.reset()
-    this.SwitchModel1.setSwitchId(1)
-    this.SwitchModel1.setSwitchId(null)
+    this.switchModel1.reset()
+    this.switchModel1.setSwitchId(1)
+    this.switchModel1.setSwitchId(null)
   }
 
   updateModelForSecond() {
-    this.SwitchModel2.reset()
-    this.SwitchModel2.setSwitchId(2)
-    this.SwitchModel2.setIsOn(true)
+    this.switchModel2.reset()
+    this.switchModel2.setSwitchId(2)
+    this.switchModel2.setIsOn(true)
   }
 
   updateModelForThird() {
-    this.SwitchModel3.reset()
-    this.SwitchModel3.setSwitchId(3)
-    this.SwitchModel3.setWithIcon(true)
+    this.switchModel3.reset()
+    this.switchModel3.setSwitchId(3)
+    this.switchModel3.setWithIcon(true)
   }
 
   updateModelForFourth() {
-    this.SwitchModel4.reset()
-    this.SwitchModel4.setSwitchId(4)
-    this.SwitchModel4.setIsOn(true)
-    this.SwitchModel4.setWithIcon(true)
+    this.switchModel4.reset()
+    this.switchModel4.setSwitchId(4)
+    this.switchModel4.setIsOn(true)
+    this.switchModel4.setWithIcon(true)
   }
 
   updateModelForFifth() {
-    this.SwitchModel5.reset()
-    this.SwitchModel5.setSwitchId(5)
-    this.SwitchModel5.setDisabled(true)
+    this.switchModel5.reset()
+    this.switchModel5.setSwitchId(5)
+    this.switchModel5.setDisabled(true)
   }
 
   updateModelForSixth() {
-    this.SwitchModel6.reset()
-    this.SwitchModel6.setSwitchId(6)
-    this.SwitchModel6.setIsOn(true)
-    this.SwitchModel6.setDisabled(true)
+    this.switchModel6.reset()
+    this.switchModel6.setSwitchId(6)
+    this.switchModel6.setIsOn(true)
+    this.switchModel6.setDisabled(true)
   }
 
   build() {
@@ -79,7 +79,7 @@ struct Index {
         .fontSize('24vp')
         .margin({ bottom: '24vp' })
       Switch({
-        model: this.SwitchModel1,
+        model: this.switchModel1,
         onSelect: (id, isOn) => {
           prompt.showToast({
             message: id.toString()
@@ -88,7 +88,7 @@ struct Index {
       })
 
       Switch({
-        model: this.SwitchModel2,
+        model: this.switchModel2,
         onSelect: (id, isOn) => {
           prompt.showToast({
             message: id.toString()
@@ -101,7 +101,7 @@ struct Index {
         .margin({ top: '24vp', bottom: '24vp' })
 
       Switch({
-        model: this.SwitchModel3,
+        model: this.switchModel3,
         onSelect: (id, isOn) => {
           prompt.showToast({
             message: id.toString()
@@ -110,7 +110,7 @@ struct Index {
       })
 
       Switch({
-        model: this.SwitchModel4,
+        model: this.switchModel4,
         onSelect: (id, isOn) => {
           prompt.showToast({
             message: id.toString()
@@ -123,7 +123,7 @@ struct Index {
         .margin({ top: '24vp', bottom: '24vp' })
 
       Switch({
-        model: this.SwitchModel5,
+        model: this.switchModel5,
         onSelect: (id, isOn) => {
           prompt.showToast({
             message: id.toString()
@@ -132,7 +132,7 @@ struct Index {
       })
 
       Switch({
-        model: this.SwitchModel6,
+        model: this.switchModel6,
         onSelect: (id, isOn) => {
           prompt.showToast({
             message: id.toString()

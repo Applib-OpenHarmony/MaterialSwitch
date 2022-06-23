@@ -32,32 +32,32 @@ const material_switch_1 = __webpack_require__(/*! @ohos/material-switch */ "../.
 class Index extends View {
     constructor(compilerAssignedUniqueChildId, parent, params) {
         super(compilerAssignedUniqueChildId, parent);
-        this.SwitchModel1 = new material_switch_1.SwitchModel.Model();
-        this.SwitchModel2 = new material_switch_1.SwitchModel.Model();
-        this.SwitchModel3 = new material_switch_1.SwitchModel.Model();
-        this.SwitchModel4 = new material_switch_1.SwitchModel.Model();
-        this.SwitchModel5 = new material_switch_1.SwitchModel.Model();
-        this.SwitchModel6 = new material_switch_1.SwitchModel.Model();
+        this.switchModel1 = new material_switch_1.SwitchModel.Model();
+        this.switchModel2 = new material_switch_1.SwitchModel.Model();
+        this.switchModel3 = new material_switch_1.SwitchModel.Model();
+        this.switchModel4 = new material_switch_1.SwitchModel.Model();
+        this.switchModel5 = new material_switch_1.SwitchModel.Model();
+        this.switchModel6 = new material_switch_1.SwitchModel.Model();
         this.updateWithValueParams(params);
     }
     updateWithValueParams(params) {
-        if (params.SwitchModel1 !== undefined) {
-            this.SwitchModel1 = params.SwitchModel1;
+        if (params.switchModel1 !== undefined) {
+            this.switchModel1 = params.switchModel1;
         }
-        if (params.SwitchModel2 !== undefined) {
-            this.SwitchModel2 = params.SwitchModel2;
+        if (params.switchModel2 !== undefined) {
+            this.switchModel2 = params.switchModel2;
         }
-        if (params.SwitchModel3 !== undefined) {
-            this.SwitchModel3 = params.SwitchModel3;
+        if (params.switchModel3 !== undefined) {
+            this.switchModel3 = params.switchModel3;
         }
-        if (params.SwitchModel4 !== undefined) {
-            this.SwitchModel4 = params.SwitchModel4;
+        if (params.switchModel4 !== undefined) {
+            this.switchModel4 = params.switchModel4;
         }
-        if (params.SwitchModel5 !== undefined) {
-            this.SwitchModel5 = params.SwitchModel5;
+        if (params.switchModel5 !== undefined) {
+            this.switchModel5 = params.switchModel5;
         }
-        if (params.SwitchModel6 !== undefined) {
-            this.SwitchModel6 = params.SwitchModel6;
+        if (params.switchModel6 !== undefined) {
+            this.switchModel6 = params.switchModel6;
         }
     }
     aboutToBeDeleted() {
@@ -72,36 +72,36 @@ class Index extends View {
         this.updateModelForSixth();
     }
     updateModelForFirst() {
-        this.SwitchModel1.reset();
-        this.SwitchModel1.setSwitchId(1);
-        this.SwitchModel1.setSwitchId(null);
+        this.switchModel1.reset();
+        this.switchModel1.setSwitchId(1);
+        this.switchModel1.setSwitchId(null);
     }
     updateModelForSecond() {
-        this.SwitchModel2.reset();
-        this.SwitchModel2.setSwitchId(2);
-        this.SwitchModel2.setIsOn(true);
+        this.switchModel2.reset();
+        this.switchModel2.setSwitchId(2);
+        this.switchModel2.setIsOn(true);
     }
     updateModelForThird() {
-        this.SwitchModel3.reset();
-        this.SwitchModel3.setSwitchId(3);
-        this.SwitchModel3.setWithIcon(true);
+        this.switchModel3.reset();
+        this.switchModel3.setSwitchId(3);
+        this.switchModel3.setWithIcon(true);
     }
     updateModelForFourth() {
-        this.SwitchModel4.reset();
-        this.SwitchModel4.setSwitchId(4);
-        this.SwitchModel4.setIsOn(true);
-        this.SwitchModel4.setWithIcon(true);
+        this.switchModel4.reset();
+        this.switchModel4.setSwitchId(4);
+        this.switchModel4.setIsOn(true);
+        this.switchModel4.setWithIcon(true);
     }
     updateModelForFifth() {
-        this.SwitchModel5.reset();
-        this.SwitchModel5.setSwitchId(5);
-        this.SwitchModel5.setDisabled(true);
+        this.switchModel5.reset();
+        this.switchModel5.setSwitchId(5);
+        this.switchModel5.setDisabled(true);
     }
     updateModelForSixth() {
-        this.SwitchModel6.reset();
-        this.SwitchModel6.setSwitchId(6);
-        this.SwitchModel6.setIsOn(true);
-        this.SwitchModel6.setDisabled(true);
+        this.switchModel6.reset();
+        this.switchModel6.setSwitchId(6);
+        this.switchModel6.setIsOn(true);
+        this.switchModel6.setDisabled(true);
     }
     render() {
         Column.create();
@@ -117,7 +117,7 @@ class Index extends View {
         let earlierCreatedChild_2 = this.findChildById("2");
         if (earlierCreatedChild_2 == undefined) {
             View.create(new material_switch_1.Switch("2", this, {
-                model: this.SwitchModel1,
+                model: this.switchModel1,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -127,7 +127,7 @@ class Index extends View {
         }
         else {
             earlierCreatedChild_2.updateWithValueParams({
-                model: this.SwitchModel1,
+                model: this.switchModel1,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -139,7 +139,7 @@ class Index extends View {
         let earlierCreatedChild_3 = this.findChildById("3");
         if (earlierCreatedChild_3 == undefined) {
             View.create(new material_switch_1.Switch("3", this, {
-                model: this.SwitchModel2,
+                model: this.switchModel2,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -149,7 +149,7 @@ class Index extends View {
         }
         else {
             earlierCreatedChild_3.updateWithValueParams({
-                model: this.SwitchModel2,
+                model: this.switchModel2,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -166,7 +166,7 @@ class Index extends View {
         let earlierCreatedChild_4 = this.findChildById("4");
         if (earlierCreatedChild_4 == undefined) {
             View.create(new material_switch_1.Switch("4", this, {
-                model: this.SwitchModel3,
+                model: this.switchModel3,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -176,7 +176,7 @@ class Index extends View {
         }
         else {
             earlierCreatedChild_4.updateWithValueParams({
-                model: this.SwitchModel3,
+                model: this.switchModel3,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -188,7 +188,7 @@ class Index extends View {
         let earlierCreatedChild_5 = this.findChildById("5");
         if (earlierCreatedChild_5 == undefined) {
             View.create(new material_switch_1.Switch("5", this, {
-                model: this.SwitchModel4,
+                model: this.switchModel4,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -198,7 +198,7 @@ class Index extends View {
         }
         else {
             earlierCreatedChild_5.updateWithValueParams({
-                model: this.SwitchModel4,
+                model: this.switchModel4,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -215,7 +215,7 @@ class Index extends View {
         let earlierCreatedChild_6 = this.findChildById("6");
         if (earlierCreatedChild_6 == undefined) {
             View.create(new material_switch_1.Switch("6", this, {
-                model: this.SwitchModel5,
+                model: this.switchModel5,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -225,7 +225,7 @@ class Index extends View {
         }
         else {
             earlierCreatedChild_6.updateWithValueParams({
-                model: this.SwitchModel5,
+                model: this.switchModel5,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -237,7 +237,7 @@ class Index extends View {
         let earlierCreatedChild_7 = this.findChildById("7");
         if (earlierCreatedChild_7 == undefined) {
             View.create(new material_switch_1.Switch("7", this, {
-                model: this.SwitchModel6,
+                model: this.switchModel6,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()
@@ -247,7 +247,7 @@ class Index extends View {
         }
         else {
             earlierCreatedChild_7.updateWithValueParams({
-                model: this.SwitchModel6,
+                model: this.switchModel6,
                 onSelect: (id, isOn) => {
                     _system_prompt_1.showToast({
                         message: id.toString()

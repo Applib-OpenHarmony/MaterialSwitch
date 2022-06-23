@@ -14,13 +14,13 @@ Install using npm
 1. Import files and code dependencies
 
 ```ets
-import { Switch, switchModel }  from "@ohos/material-switch"
+import { Switch, SwitchModel }  from "@ohos/material-switch"
 ```
 
 2. Initialize switch model data
 
 ```
-private model: switchModel.Model = new switchModel.Model();
+private model: SwitchModel.Model = new SwitchModel.Model();
 ```
 
 3. Code for creating default switch

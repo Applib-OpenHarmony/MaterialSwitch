@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-import switchModel from "./switchModel"
+import SwitchModel from "./switchModel"
 
 
 @Component
 export struct Switch {
-  @State model: switchModel.Model = new switchModel.Model();
+  @State model: SwitchModel.Model = new SwitchModel.Model();
   private onSelect: ((id: number, isOn: boolean) => void) = null
 
   private onClick() {
@@ -31,10 +31,10 @@ export struct Switch {
         duration: 100,
         onFinish: () => {
           if (this.model.getIsOn() == false) {
-            this.model.setSwitchSize(16)
+            this.model.setSwitchSize('16vp')
           }
           else {
-            this.model.setSwitchSize(24)
+            this.model.setSwitchSize('24vp')
           }
           this.model.setShowAnimation(false)
         }
@@ -53,37 +53,38 @@ export struct Switch {
   build() {
     Shape() {
       Button()
-        .width(52)
-        .height(32)
+        .width('52vp')
+        .height('32vp')
         .backgroundColor(this.model.getIsOn() ? this.model.getOnBackgroundColor() : this.model.getOffBackgroundColor())
         .borderColor(this.model.getIsOn() ? this.model.getOnBorderColor() : this.model.getOffBorderColor())
-        .borderWidth(2)
-        .borderRadius(2)
+        .borderWidth('2vp')
+        .borderRadius('2vp')
 
       if (this.model.getShowAnimation()) {
         Circle()
-          .width(38).height(38).fill("rgba(0,0,0,0.3)")
-          .offset({ x: this.model.getIsOn() ? 17 : -3.5, y: -3 })
+          .width('38vp').height('38vp').fill("rgba(0,0,0,0.3)")
+          .offset({ x: this.model.getIsOn() ? '17vp' : '-3.5vp', y: '-3vp' })
       }
       Circle()
-        .width(this.model.getShowAnimation() ? 28 : this.model.getSwitchSize())
-        .height(this.model.getShowAnimation() ? 28 : this.model.getSwitchSize())
+        .width(this.model.getShowAnimation() ? '28vp' : this.model.getSwitchSize())
+        .height(this.model.getShowAnimation() ? '28vp' : this.model.getSwitchSize())
         .offset({
           x: this.model.getShowAnimation() ?
-            (this.model.getIsOn() ? 20 : 2)
-                                        :
-            (this.model.getIsOn() ? 23 : 5),
-          y: this.model.getShowAnimation() ? 2 : (16 - (this.model.getSwitchSize()) / 2)
+            (this.model.getIsOn() ? '20vp' : '2vp')
+                                           :
+            (this.model.getIsOn() ? '23vp' : '5vp'),
+          y: this.model.getShowAnimation() ? '2vp' : ((16 - (Number(this.model.getSwitchSize()
+            .substring(0, 2))) / 2).toString() + 'vp')
         })
         .fill(this.model.getIsOn() ? this.model.getOnCircleColor() : this.model.getOffCircleColor())
       if (this.model.getWithIcon()) {
         Image(this.model.getIcon())
           .width('10')
           .height('10')
-          .offset({ x: this.model.getIsOn() ? 30 : 8, y: 11 })
+          .offset({ x: this.model.getIsOn() ? '30vp' : '8vp', y: '11vp' })
       }
-    }.onClick(() => this.onClick()).padding(5).opacity(this.model.getDisabled() ? 0.5 : 1)
+    }.onClick(() => this.onClick()).padding('5vp').opacity(this.model.getDisabled() ? 0.5 : 1)
   }
 }
 
-export { switchModel } from "./switchModel";
+export { SwitchModel } from "./switchModel";

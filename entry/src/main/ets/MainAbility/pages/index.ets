@@ -14,17 +14,17 @@
  */
 
 import prompt from '@system.prompt';
-import { Switch, switchModel }  from "@ohos/material-switch"
+import { Switch, SwitchModel }  from "@ohos/material-switch"
 
 @Entry
 @Component
 struct Index {
-  private switchModel1: switchModel.Model = new switchModel.Model();
-  private switchModel2: switchModel.Model = new switchModel.Model();
-  private switchModel3: switchModel.Model = new switchModel.Model();
-  private switchModel4: switchModel.Model = new switchModel.Model();
-  private switchModel5: switchModel.Model = new switchModel.Model();
-  private switchModel6: switchModel.Model = new switchModel.Model();
+  private SwitchModel1: SwitchModel.Model = new SwitchModel.Model();
+  private SwitchModel2: SwitchModel.Model = new SwitchModel.Model();
+  private SwitchModel3: SwitchModel.Model = new SwitchModel.Model();
+  private SwitchModel4: SwitchModel.Model = new SwitchModel.Model();
+  private SwitchModel5: SwitchModel.Model = new SwitchModel.Model();
+  private SwitchModel6: SwitchModel.Model = new SwitchModel.Model();
 
   public aboutToAppear(): void {
     this.updateModelForFirst()
@@ -36,107 +36,113 @@ struct Index {
   }
 
   updateModelForFirst() {
-    this.switchModel1.reset()
-    this.switchModel1.setSwitchId(1)
+    this.SwitchModel1.reset()
+    this.SwitchModel1.setSwitchId(1)
+    this.SwitchModel1.setSwitchId(null)
   }
-  updateModelForSecond(){
-    this.switchModel2.reset()
-    this.switchModel2.setSwitchId(2)
-    this.switchModel2.setIsOn(true)
+
+  updateModelForSecond() {
+    this.SwitchModel2.reset()
+    this.SwitchModel2.setSwitchId(2)
+    this.SwitchModel2.setIsOn(true)
   }
-  updateModelForThird(){
-    this.switchModel3.reset()
-    this.switchModel3.setSwitchId(3)
-    this.switchModel3.setWithIcon(true)
+
+  updateModelForThird() {
+    this.SwitchModel3.reset()
+    this.SwitchModel3.setSwitchId(3)
+    this.SwitchModel3.setWithIcon(true)
   }
-  updateModelForFourth(){
-    this.switchModel4.reset()
-    this.switchModel4.setSwitchId(4)
-    this.switchModel4.setIsOn(true)
-    this.switchModel4.setWithIcon(true)
+
+  updateModelForFourth() {
+    this.SwitchModel4.reset()
+    this.SwitchModel4.setSwitchId(4)
+    this.SwitchModel4.setIsOn(true)
+    this.SwitchModel4.setWithIcon(true)
   }
-  updateModelForFifth(){
-    this.switchModel5.reset()
-    this.switchModel5.setSwitchId(5)
-    this.switchModel5.setDisabled(true)
+
+  updateModelForFifth() {
+    this.SwitchModel5.reset()
+    this.SwitchModel5.setSwitchId(5)
+    this.SwitchModel5.setDisabled(true)
   }
-  updateModelForSixth(){
-    this.switchModel6.reset()
-    this.switchModel6.setSwitchId(6)
-    this.switchModel6.setIsOn(true)
-    this.switchModel6.setDisabled(true)
+
+  updateModelForSixth() {
+    this.SwitchModel6.reset()
+    this.SwitchModel6.setSwitchId(6)
+    this.SwitchModel6.setIsOn(true)
+    this.SwitchModel6.setDisabled(true)
   }
 
   build() {
-      Column() {
-        Text("Default Switches")
-                .fontSize('24vp')
-                .margin({ bottom: '24vp' })
-        Switch({
-          model: this.switchModel1,
-          onSelect: (id, isOn) => {
-            prompt.showToast({
-              message: id.toString()
-            })
-          }
-        })
+    Column() {
+      Text("Default Switches")
+        .fontSize('24vp')
+        .margin({ bottom: '24vp' })
+      Switch({
+        model: this.SwitchModel1,
+        onSelect: (id, isOn) => {
+          prompt.showToast({
+            message: id.toString()
+          })
+        }
+      })
 
-        Switch({
-          model: this.switchModel2,
-          onSelect: (id, isOn) => {
-            prompt.showToast({
-              message: id.toString()
-            })
-          }
-        })
+      Switch({
+        model: this.SwitchModel2,
+        onSelect: (id, isOn) => {
+          prompt.showToast({
+            message: id.toString()
+          })
+        }
+      })
 
-        Text("Switches with Icons")
-          .fontSize('24vp')
-          .margin({ top: '24vp', bottom: '24vp' })
+      Text("Switches with Icons")
+        .fontSize('24vp')
+        .margin({ top: '24vp', bottom: '24vp' })
 
-        Switch({
-          model: this.switchModel3,
-          onSelect: (id, isOn) => {
-            prompt.showToast({
-              message: id.toString()
-            })
-          }
-        })
+      Switch({
+        model: this.SwitchModel3,
+        onSelect: (id, isOn) => {
+          prompt.showToast({
+            message: id.toString()
+          })
+        }
+      })
 
-        Switch({
-          model: this.switchModel4,
-          onSelect: (id, isOn) => {
-            prompt.showToast({
-              message: id.toString()
-            })
-          }
-        })
+      Switch({
+        model: this.SwitchModel4,
+        onSelect: (id, isOn) => {
+          prompt.showToast({
+            message: id.toString()
+          })
+        }
+      })
 
-        Text("Disabled Switches")
-          .fontSize('24vp')
-          .margin({ top: '24vp', bottom: '24vp' })
+      Text("Disabled Switches")
+        .fontSize('24vp')
+        .margin({ top: '24vp', bottom: '24vp' })
 
-        Switch({
-          model: this.switchModel5,
-          onSelect: (id, isOn) => {
-            prompt.showToast({
-              message: id.toString()
-            })
-          }
-        })
+      Switch({
+        model: this.SwitchModel5,
+        onSelect: (id, isOn) => {
+          prompt.showToast({
+            message: id.toString()
+          })
+        }
+      })
 
-        Switch({
-          model: this.switchModel6,
-          onSelect: (id, isOn) => {
-            prompt.showToast({
-              message: id.toString()
-            })
-          }
-        })
+      Switch({
+        model: this.SwitchModel6,
+        onSelect: (id, isOn) => {
+          prompt.showToast({
+            message: id.toString()
+          })
+        }
+      })
 
-      }
-      .width('100%')
-      .padding('24vp')
-      .alignItems(HorizontalAlign.Center)
+    }
+    .width('100%')
+    .padding('24vp')
+    .alignItems(HorizontalAlign.Center)
   }
 }

@@ -55,7 +55,7 @@
           "type": "pageAbility"
         },
         "pages": [
-          "pages/switcheswithouticons"
+          "pages/index"
         ],
         "name": ".MainAbility",
         "window": {

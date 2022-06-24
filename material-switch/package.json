@@ -1,5 +1,5 @@
 {
-  "name": "material-switch",
+  "name": "@ohos/material-switch",
   "version": "1.0.0",
   "description": "",
   "main": "src/switch.ets",

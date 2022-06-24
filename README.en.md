@@ -6,7 +6,7 @@ This library is developed to provide customizable toggle switches  implemented u
 
 Install using npm
 
-```npm i @ohos-material-switch```
+```npm i @ohos/material-switch```
 
 
 ## Usage Instructions

@@ -24,7 +24,6 @@ class colorConstants {
 export namespace SwitchModel {
   export class Model {
     private switchId: number = 0
-    private switchSize: string = '16vp'
     private withIcon: boolean = false
     private showAnimation: boolean = false
     private isOn: boolean = false
@@ -33,15 +32,10 @@ export namespace SwitchModel {
     private colorConstant = new colorConstants();
     private onBackgroundColor: string | Color | Resource = this.colorConstant.defaultOnBackgroundColor
     private offBackgroundColor: string | Color | Resource = this.colorConstant.defaultOffBackgroundColor
-
-
-
     private onCircleColor: string | Color | Resource= this.colorConstant.defaultOnCircleColor
     private offCircleColor: string | Color | Resource= this.colorConstant.defaultOffCircleColor
-
     private onBorderColor: string | Color | Resource= this.colorConstant.defaultOnBorderColor
     private offBorderColor: string | Color | Resource= this.colorConstant.defaultOffBorderColor
-
 
     getOnBackgroundColor(): string | Resource | Color {
       return this.onBackgroundColor
@@ -146,16 +140,6 @@ export namespace SwitchModel {
       return this
     }
 
-    getSwitchSize(): string{
-      return this.switchSize
-    }
-
-    setSwitchSize(switchSize: string): Model{
-      if (switchSize != null && switchSize != undefined) this.switchSize = switchSize
-      else this.switchSize = '16vp'
-      return this
-    }
-
     getWithIcon(): boolean {
       return this.withIcon
     }
@@ -189,9 +173,6 @@ export namespace SwitchModel {
     setIsOn(isOn: boolean): Model {
       if (isOn != null && isOn != undefined) {
         this.isOn = isOn
-        if (this.isOn) {
-          this.switchSize = '24vp'
-        }
       } else {
         this.isOn = false
       }
@@ -214,7 +195,6 @@ export namespace SwitchModel {
 
     reset(): Model {
       this.switchId = 0
-      this.switchSize = '16vp'
       this.withIcon = false
       this.showAnimation = false
       this.isOn = false

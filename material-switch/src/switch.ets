@@ -15,7 +15,6 @@
 
 import SwitchModel from "./switchModel"
 
-
 @Component
 export struct Switch {
   @State model: SwitchModel.Model = new SwitchModel.Model();
@@ -30,12 +29,6 @@ export struct Switch {
       animateTo({
         duration: 100,
         onFinish: () => {
-          if (this.model.getIsOn() == false) {
-            this.model.setSwitchSize('16vp')
-          }
-          else {
-            this.model.setSwitchSize('24vp')
-          }
           this.model.setShowAnimation(false)
         }
       }, () => {
@@ -66,14 +59,16 @@ export struct Switch {
           .offset({ x: this.model.getIsOn() ? '17vp' : '-3.5vp', y: '-3vp' })
       }
       Circle()
-        .width(this.model.getShowAnimation() ? '28vp' : this.model.getSwitchSize())
-        .height(this.model.getShowAnimation() ? '28vp' : this.model.getSwitchSize())
+        .width(this.model.getShowAnimation() ? '28vp' :
+          (this.model.getIsOn ? '24vp' : '16vp'))
+        .height(this.model.getShowAnimation() ? '28vp' :
+          (this.model.getIsOn ? '24vp' : '16vp'))
         .offset({
           x: this.model.getShowAnimation() ?
             (this.model.getIsOn() ? '20vp' : '2vp')
                                            :
             (this.model.getIsOn() ? '23vp' : '5vp'),
-          y: this.model.getShowAnimation() ? '2vp' : ((16 - (Number(this.model.getSwitchSize()
+          y: this.model.getShowAnimation() ? '2vp' : ((16 - (Number((this.model.getIsOn ? '24vp' : '16vp')
             .substring(0, 2))) / 2).toString() + 'vp')
         })
         .fill(this.model.getIsOn() ? this.model.getOnCircleColor() : this.model.getOffCircleColor())
@@ -81,7 +76,7 @@ export struct Switch {
         Image(this.model.getIcon())
           .width('10')
           .height('10')
-          .offset({ x: this.model.getIsOn() ? '30vp' : '8vp', y: '11vp' })
+          .offset({ x: this.model.getIsOn() ? '30vp' : '11vp', y: '11vp' })
       }
     }.onClick(() => this.onClick()).padding('5vp').opacity(this.model.getDisabled() ? 0.5 : 1)
   }

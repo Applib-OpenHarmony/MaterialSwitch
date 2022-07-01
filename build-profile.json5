@@ -22,6 +22,10 @@
           ]
         }
       ]
+    },
+    {
+      "name": "materialswitch",
+      "srcPath": "./materialswitch"
     }
   ]
 }

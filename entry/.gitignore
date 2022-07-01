@@ -4,3 +4,4 @@
 **/build
 /entry/.preview
 /.DS_store
+/package-lock.json

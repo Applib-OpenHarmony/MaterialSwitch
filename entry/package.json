@@ -10,6 +10,6 @@
   "repository": {},
   "license": "ISC",
   "dependencies": {
-    "@ohos/material-switch": "file:../material-switch"
+    "@ohos/material-switch": "file:../materialswitch"
   }
 }

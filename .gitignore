@@ -2,5 +2,3 @@
 /local.properties
 /.idea
 **/build
-/entry/.preview
-/.DS_Store
